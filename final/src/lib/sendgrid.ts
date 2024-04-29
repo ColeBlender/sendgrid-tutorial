@@ -23,10 +23,12 @@ export const sendEmail = async ({
     dynamicTemplateData,
   };
 
-  const data = await sgMail.send(msg);
-  const statusCode = data[0].statusCode;
-
-  if (statusCode.toString()[0] !== "2") throw new Error("Failed to send email");
+  try {
+    await sgMail.send(msg);
+  } catch (error) {
+    console.error(error);
+    throw new Error("Failed to send email");
+  }
 };
 
 const templates = {
