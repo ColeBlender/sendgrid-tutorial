@@ -20,18 +20,18 @@ function ContactForm() {
           name="name"
           type="text"
           placeholder="Name"
-          className="rounded-md p-2"
+          className="rounded-md p-2 text-black"
         />
         <input
           name="email"
           type="email"
           placeholder="Email"
-          className="rounded-md p-2"
+          className="rounded-md p-2 text-black"
         />
         <textarea
           name="message"
           placeholder="Message"
-          className="rounded-md p-2 min-h-40"
+          className="rounded-md p-2 min-h-40 text-black"
         />
 
         <button

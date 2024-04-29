@@ -14,11 +14,11 @@ export const sendEmail = async ({
   sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
   const msg: MailDataRequired = {
+    to,
     from: {
       email: "donotreply@thisisademobroski.mom",
       name: "This is a Demo Broski",
     },
-    to,
     templateId: templates[templateName],
     dynamicTemplateData,
   };
@@ -32,5 +32,5 @@ export const sendEmail = async ({
 };
 
 const templates = {
-  ContactSubmission: "d-f0b47f1217d7419b9d694f3fb7b7c595",
+  ContactSubmission: "d-66d3db510a7246468691d27b12e19a31",
 };

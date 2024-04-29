@@ -1,6 +1,6 @@
 "use server";
 
-import { sendEmail } from "@/lib/sendgrid";
+import { sendEmail } from "../lib/sendgrid";
 
 export const sendContactEmailAction = async (formData: FormData) => {
   try {
